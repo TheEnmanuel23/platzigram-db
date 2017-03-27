@@ -1,0 +1,14 @@
+2017-03-26T22:35:41.781316882 4.462399s notice: Recursively removing directory /home/enmisac/Documents/curso de platzi/javascript defnitivo/platzigram-db/rethinkdb_data/tmp
+2017-03-26T22:35:41.806504760 4.487570s notice: Initializing directory /home/enmisac/Documents/curso de platzi/javascript defnitivo/platzigram-db/rethinkdb_data
+2017-03-26T22:35:41.807159235 4.488209s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/enmisac/Documents/curso de platzi/javascript defnitivo/platzigram-db/rethinkdb_data' did not already exist or is empty.)
+2017-03-26T22:35:41.807243472 4.488293s notice: Running rethinkdb 2.3.5~0trusty (GCC 4.8.2)...
+2017-03-26T22:35:41.817537227 4.498595s notice: Running on Linux 4.2.0-42-generic i686
+2017-03-26T22:35:41.817761648 4.498811s notice: Loading data from directory /home/enmisac/Documents/curso de platzi/javascript defnitivo/platzigram-db/rethinkdb_data
+2017-03-26T22:35:42.062853343 4.743908s info: Automatically using cache size of 460 MB
+2017-03-26T22:35:42.308006684 4.989059s notice: Listening for intracluster connections on port 29015
+2017-03-26T22:35:42.312847368 4.993899s notice: Listening for client driver connections on port 28015
+2017-03-26T22:35:42.314561095 4.995613s notice: Listening for administrative HTTP connections on port 8080
+2017-03-26T22:35:42.424291956 5.105346s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, 10.64.160.168, ::1
+2017-03-26T22:35:43.682093622 6.363147s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, 10.64.160.168, ::1
+2017-03-26T22:35:43.782121134 6.463173s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, 10.64.160.168, ::1
+2017-03-26T22:35:43.782335294 6.463385s notice: Server ready, "enmsiac_437" 09e8d436-baac-43de-abee-b158951b07bf
