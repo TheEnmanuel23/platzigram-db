@@ -61,3 +61,77 @@
 2017-03-30T18:10:37.364246694 0.110667s error: Backtrace:
 2017-03-30T18:10:37.386680164 0.133102s error: Thu Mar 30 18:10:37 2017\n\n1 [0xb3303a]: backtrace_t::backtrace_t() at 0xb3303a (rethinkdb)\n2 [0xb3351a]: format_backtrace[abi:cxx11](bool) at 0xb3351a (rethinkdb)\n3 [0xdff93c]: report_fatal_error(char const*, int, char const*, ...) at 0xdff93c (rethinkdb)\n4 [0xcd57d6]: std::_Function_handler<void (read_stream_t*), bool metadata_file_t::read_txn_t::read_maybe<cluster_semilattice_metadata_t, (cluster_version_t)8>(metadata_file_t::key_t<cluster_semilattice_metadata_t> const&, cluster_semilattice_metadata_t*, signal_t*)::{lambda(read_stream_t*)#1}>::_M_invoke(std::_Any_data const&, read_stream_t*&&) at 0xcd57d6 (rethinkdb)\n5 [0xd98104]: metadata_file_t::read_txn_t::blob_to_stream(buf_parent_t, void const*, std::function<void (read_stream_t*)> const&) at 0xd98104 (rethinkdb)\n6 [0xd982da]: metadata_file_t::read_txn_t::read_bin(store_key_t const&, std::function<void (read_stream_t*)> const&, signal_t*) at 0xd982da (rethinkdb)\n7 [0xcd085d]: do_serve(io_backender_t*, bool, base_path_t const&, metadata_file_t*, serve_info_t const&, os_signal_cond_t*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) at 0xcd085d (rethinkdb)\n8 [0xcd518b]: serve(io_backender_t*, base_path_t const&, metadata_file_t*, serve_info_t const&, os_signal_cond_t*) at 0xcd518b (rethinkdb)\n9 [0xcb9228]: run_rethinkdb_serve(base_path_t const&, serve_info_t*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, file_direct_io_mode_t, int, boost::optional<boost::optional<unsigned long> > const&, server_id_t const*, server_config_versioned_t const*, cluster_semilattice_metadata_t const*, directory_lock_t*, bool*) at 0xcb9228 (rethinkdb)\n10 [0xcba62d]: run_rethinkdb_porcelain(base_path_t const&, name_string_t const&, std::set<name_string_t, std::less<name_string_t>, std::allocator<name_string_t> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, file_direct_io_mode_t, int, boost::optional<boost::optional<unsigned long> > const&, bool, serve_info_t*, directory_lock_t*, bool*) at 0xcba62d (rethinkdb)\n11 [0xcbadfd]: std::_Function_handler<void (), std::_Bind<void (*(base_path_t, name_string_t, std::set<name_string_t, std::less<name_string_t>, std::allocator<name_string_t> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, file_direct_io_mode_t, int, boost::optional<boost::optional<unsigned long> >, bool, serve_info_t*, directory_lock_t*, bool*))(base_path_t const&, name_string_t const&, std::set<name_string_t, std::less<name_string_t>, std::allocator<name_string_t> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, file_direct_io_mode_t, int, boost::optional<boost::optional<unsigned long> > const&, bool, serve_info_t*, directory_lock_t*, bool*)> >::_M_invoke(std::_Any_data const&) at 0xcbadfd (rethinkdb)\n12 [0xa37501]: starter_t::run_wrapper(std::function<void ()> const&) at 0xa37501 (rethinkdb)\n13 [0xa3be18]: coro_t::run() at 0xa3be18 (rethinkdb)
 2017-03-30T18:10:37.386847273 0.133267s error: Exiting.
+2017-09-14T16:40:21.997194924 1.287849s notice: Recursively removing directory /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data/tmp
+2017-09-14T16:40:22.059253115 1.349900s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-09-14T16:40:22.073712436 1.364357s notice: Running on Linux 4.2.0-42-generic i686
+2017-09-14T16:40:22.074144200 1.364781s notice: Loading data from directory /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data
+2017-09-14T16:40:22.148669393 1.439314s info: Automatically using cache size of 725 MB
+2017-09-14T16:40:22.160983705 1.451624s notice: Listening for intracluster connections on port 29015
+2017-09-14T16:40:22.168105411 1.458745s notice: Listening for client driver connections on port 28015
+2017-09-14T16:40:22.168839853 1.459477s notice: Listening for administrative HTTP connections on port 8080
+2017-09-14T16:40:22.168855445 1.459491s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-09-14T16:40:22.168861469 1.459497s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-09-14T16:40:22.168873353 1.459509s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-09-14T16:40:22.168878606 1.459514s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-09-14T16:40:22.168888981 1.459525s notice: Server ready, "enmsiac_437" 09e8d436-baac-43de-abee-b158951b07bf
+2017-09-14T16:50:50.728304152 630.018942s info: Table 896ea5ed-2d4a-4683-9b84-7a377d61b89b: Starting a new Raft election for term 1.
+2017-09-14T16:50:50.729134975 630.019773s info: Table 896ea5ed-2d4a-4683-9b84-7a377d61b89b: Added replica on this server.
+2017-09-14T16:50:50.785757824 630.076396s info: Table 896ea5ed-2d4a-4683-9b84-7a377d61b89b: This server is Raft leader for term 1. Latest log index is 0.
+2017-09-14T16:51:13.039533999 652.330173s notice: Removing file /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data/896ea5ed-2d4a-4683-9b84-7a377d61b89b
+2017-09-14T16:51:13.039816073 652.330453s info: Table 896ea5ed-2d4a-4683-9b84-7a377d61b89b: Deleted the table.
+2017-09-14T16:51:25.623469340 664.914107s info: Table 1e7303dc-f4df-4fb4-a39f-43ed49612798: Added replica on this server.
+2017-09-14T16:51:25.623664465 664.914301s info: Table 1e7303dc-f4df-4fb4-a39f-43ed49612798: Starting a new Raft election for term 1.
+2017-09-14T16:51:25.667173399 664.957811s info: Table 1e7303dc-f4df-4fb4-a39f-43ed49612798: This server is Raft leader for term 1. Latest log index is 0.
+2017-09-14T18:08:34.509949742 5293.800588s info: Table fc7a2f08-a272-47d5-8179-bc65732b077f: Starting a new Raft election for term 1.
+2017-09-14T18:08:34.510911672 5293.801550s info: Table fc7a2f08-a272-47d5-8179-bc65732b077f: Added replica on this server.
+2017-09-14T18:08:34.555071620 5293.845710s info: Table fc7a2f08-a272-47d5-8179-bc65732b077f: This server is Raft leader for term 1. Latest log index is 0.
+2017-09-14T19:02:58.429902034 7.698680s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-09-14T19:02:58.444022576 7.712791s notice: Running on Linux 4.2.0-42-generic i686
+2017-09-14T19:02:58.445851825 7.714616s notice: Loading data from directory /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data
+2017-09-14T19:02:58.583321857 7.852089s info: Automatically using cache size of 691 MB
+2017-09-14T19:02:58.593124716 7.861888s notice: Listening for intracluster connections on port 29015
+2017-09-14T19:02:58.838269801 8.107032s notice: Listening for client driver connections on port 28015
+2017-09-14T19:02:58.869963660 8.138731s notice: Listening for administrative HTTP connections on port 8080
+2017-09-14T19:02:58.869987446 8.138748s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-09-14T19:02:58.870765697 8.139527s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-09-14T19:02:58.870779939 8.139540s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-09-14T19:02:58.870793349 8.139554s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-09-14T19:02:58.870804013 8.139565s notice: Server ready, "enmsiac_437" 09e8d436-baac-43de-abee-b158951b07bf
+2017-09-14T19:02:59.897963543 9.166726s info: Table fc7a2f08-a272-47d5-8179-bc65732b077f: Starting a new Raft election for term 2.
+2017-09-14T19:02:59.939512445 9.208277s info: Table fc7a2f08-a272-47d5-8179-bc65732b077f: This server is Raft leader for term 2. Latest log index is 3.
+2017-09-14T19:03:00.472300088 9.741062s info: Table 1e7303dc-f4df-4fb4-a39f-43ed49612798: Starting a new Raft election for term 2.
+2017-09-14T19:03:00.548372743 9.817136s info: Table 1e7303dc-f4df-4fb4-a39f-43ed49612798: This server is Raft leader for term 2. Latest log index is 2.
+2017-09-14T19:03:19.551072440 28.819836s info: Table 85f52bd0-1c6a-480d-a4b6-4b9c104f3236: Starting a new Raft election for term 1.
+2017-09-14T19:03:19.551902275 28.820665s info: Table 85f52bd0-1c6a-480d-a4b6-4b9c104f3236: Added replica on this server.
+2017-09-14T19:03:19.616609850 28.885374s info: Table 85f52bd0-1c6a-480d-a4b6-4b9c104f3236: This server is Raft leader for term 1. Latest log index is 0.
+2017-09-14T19:03:20.688854872 29.957617s info: Table 83ddbd0d-2675-4229-bf9b-35ad0cf884fb: Starting a new Raft election for term 1.
+2017-09-14T19:03:20.689252219 29.958013s info: Table 83ddbd0d-2675-4229-bf9b-35ad0cf884fb: Added replica on this server.
+2017-09-14T19:03:20.738668687 30.007431s info: Table 83ddbd0d-2675-4229-bf9b-35ad0cf884fb: This server is Raft leader for term 1. Latest log index is 0.
+2017-09-14T19:12:43.972365627 593.241129s info: Table b0594d70-51a8-47d4-bd45-6c40ea39640c: Added replica on this server.
+2017-09-14T19:12:43.972398076 593.241159s info: Table b0594d70-51a8-47d4-bd45-6c40ea39640c: Starting a new Raft election for term 1.
+2017-09-14T19:12:44.014508588 593.283273s info: Table b0594d70-51a8-47d4-bd45-6c40ea39640c: This server is Raft leader for term 1. Latest log index is 0.
+2017-09-14T19:12:45.282743970 594.551507s info: Table 8e7b670a-6637-4f6f-a62e-12543c478857: Starting a new Raft election for term 1.
+2017-09-14T19:12:45.283372141 594.552135s info: Table 8e7b670a-6637-4f6f-a62e-12543c478857: Added replica on this server.
+2017-09-14T19:12:45.318208732 594.586971s info: Table 8e7b670a-6637-4f6f-a62e-12543c478857: This server is Raft leader for term 1. Latest log index is 0.
+2017-09-14T19:15:44.954794397 774.223558s notice: Removing file /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data/1e7303dc-f4df-4fb4-a39f-43ed49612798
+2017-09-14T19:15:44.955082605 774.223844s info: Table 1e7303dc-f4df-4fb4-a39f-43ed49612798: Deleted the table.
+2017-09-14T19:15:45.008986895 774.277750s notice: Removing file /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data/fc7a2f08-a272-47d5-8179-bc65732b077f
+2017-09-14T19:15:45.009029766 774.277790s info: Table fc7a2f08-a272-47d5-8179-bc65732b077f: Deleted the table.
+2017-09-14T19:15:50.753966900 780.022730s notice: Removing file /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data/8e7b670a-6637-4f6f-a62e-12543c478857
+2017-09-14T19:15:50.754002510 780.022763s info: Table 8e7b670a-6637-4f6f-a62e-12543c478857: Deleted the table.
+2017-09-14T19:15:50.823984016 780.092747s notice: Removing file /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data/b0594d70-51a8-47d4-bd45-6c40ea39640c
+2017-09-14T19:15:50.824024630 780.092785s info: Table b0594d70-51a8-47d4-bd45-6c40ea39640c: Deleted the table.
+2017-09-14T19:15:56.032338814 785.301102s notice: Removing file /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data/83ddbd0d-2675-4229-bf9b-35ad0cf884fb
+2017-09-14T19:15:56.033857933 785.302621s info: Table 83ddbd0d-2675-4229-bf9b-35ad0cf884fb: Deleted the table.
+2017-09-14T19:15:56.126690613 785.395454s notice: Removing file /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data/85f52bd0-1c6a-480d-a4b6-4b9c104f3236
+2017-09-14T19:15:56.126992660 785.395754s info: Table 85f52bd0-1c6a-480d-a4b6-4b9c104f3236: Deleted the table.
+2017-09-14T19:16:48.809859786 838.078622s info: Table 1f21215f-af33-40ff-8229-d419002b5968: Starting a new Raft election for term 1.
+2017-09-14T19:16:48.810878573 838.079641s info: Table 1f21215f-af33-40ff-8229-d419002b5968: Added replica on this server.
+2017-09-14T19:16:48.852031855 838.120795s info: Table 1f21215f-af33-40ff-8229-d419002b5968: This server is Raft leader for term 1. Latest log index is 0.
+2017-09-14T19:16:50.137379861 839.406143s info: Table e59ac6c2-a747-4486-976d-9e53019acfd4: Starting a new Raft election for term 1.
+2017-09-14T19:16:50.138221872 839.406984s info: Table e59ac6c2-a747-4486-976d-9e53019acfd4: Added replica on this server.
+2017-09-14T19:16:50.180377371 839.449140s info: Table e59ac6c2-a747-4486-976d-9e53019acfd4: This server is Raft leader for term 1. Latest log index is 0.
+2017-09-14T19:16:51.127678227 840.396443s notice: Removing file /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data/1f21215f-af33-40ff-8229-d419002b5968
+2017-09-14T19:16:51.127714426 840.396475s info: Table 1f21215f-af33-40ff-8229-d419002b5968: Deleted the table.
+2017-09-14T19:16:51.182507458 840.451271s notice: Removing file /home/enmisac/Documents/node_projects/platzigram-db/rethinkdb_data/e59ac6c2-a747-4486-976d-9e53019acfd4
+2017-09-14T19:16:51.182544015 840.451304s info: Table e59ac6c2-a747-4486-976d-9e53019acfd4: Deleted the table.
