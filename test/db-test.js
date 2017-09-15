@@ -25,10 +25,19 @@ test.after.always('cleanup database', async t => {
 
 test('save image', async t => {
   t.is(typeof db.saveImage, 'function', 'saveImage is function')
-  
+
   let image = {
     url: `https://platzigram.test/${uuid.v4()}.jpg`,
     likes: 0,
+    liked: false,
     user_id: uuid.uuid()
   }
+
+  let created = await db.saveImage(image)
+  t.is(created.url, image.url)
+  t.is(created.likes, image.likes)
+  t.is(created.liked, image.liked)
+  t.is(created.user_id, image.user_id)
+  t.is(typeof created.id, 'string')
+  t.truthy(created.createdAt)
 })
