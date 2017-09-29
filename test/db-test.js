@@ -102,3 +102,32 @@ test('save user', async t => {
   t.is(typeof created.id, 'string')
   t.truthy(created.createdAt)
 })
+
+test('get user', async t => {
+  let db = t.context.db
+
+  t.is(typeof db.getUser, 'function', 'return an user')
+
+  let user = fixtures.getUser()
+
+  let created = await db.saveUser(user)
+
+  let getUser = await db.getUser(created.username)
+
+  t.deepEqual(created.username, getUser.username)
+})
+
+test('authenticate user', async t => {
+  let db = t.context.db
+
+  t.is(typeof db.authenticate, 'function', 'authenticate is a function')
+  let user = fixtures.getUser()
+  let plainPassword = user.password
+  await db.saveUser(user)
+
+  let success = await db.authenticate(user.username, plainPassword)
+  t.true(success)
+
+  let fail = await db.authenticate(user.username, 'foo')
+  t.false(fail)
+})
