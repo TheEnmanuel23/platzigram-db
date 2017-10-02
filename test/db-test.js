@@ -9,7 +9,7 @@ const utils = require('../lib/utils')
 
 test.beforeEach('setup database', async t => {
   const dbName = `platzigram_${uuid.v4()}`
-  const db = new Db({ db: dbName })
+  const db = new Db({ db: dbName, setup: true })
 
   t.context.db = db
   t.context.dbName = dbName
